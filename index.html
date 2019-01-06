@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        .codeArea {
+            width: 100%;
+            height: 100%;
+        }
+        .textAreaWrapper {
+            width: 500px;
+            height: 70vh;
+        }
+        textarea {
+            width: 80%;
+            height: 95%;
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .green{
+            background-color: green;
+        }
+
+        .flex-container{
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+<table class='codeArea'>
+    <tr>
+        <td>Enter function arguments:</td>
+    </tr>
+    <tr>
+        <table id="argsTable">
+            <tr class='arg'>
+                <td>
+                    <label>Arg name: <input id="name" type="text"></label>
+                </td>
+                <td>
+                    <label>Arg value: <input id="value" type="text"></label>
+                </td>
+            </tr>
+        </table>
+    </tr>
+    <tr>
+        <button id="addArg">Add function argument</button>
+    </tr>
+</table>
+<br><br>
+<div class="flex-container">
+    <div>
+        <div>
+            <label>Enter code here</label>
+            <div class="textAreaWrapper">
+                <textarea id="codePlaceholder" title="Enter code here"></textarea>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div>
+            <label>CFG</label>
+            <div style="margin-left: 11%;" id="Graph"></div>
+        </div>
+    </div>
+</div>
+<div>
+    <button id="RunCfgButton">Parse code</button>
+</div>
+
+
+<script src="dist/bundle.js"></script>
+<script src="http://flowchart.js.org/flowchart-latest.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="src/js/app.js"></script>
+</body>
+</html>
